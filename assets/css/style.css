@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Gravitas+One&family=Inter:wght@400;900&display=swap");
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 5%;
+  width: 90%;
+  min-width: calc(350px - 10%);
+  font-family: "Inter";
+  font-style: normal;
+}
+body .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+body .header .logo {
+  color: #333333;
+  font-family: "Gravitas One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 76px;
+  letter-spacing: -10px;
+}
+body .header nav {
+  position: relative;
+  width: 35vw;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  color: #333333;
+}
+body .header nav .mobile {
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  right: 0;
+  background: #333333;
+}
+body .header nav .mobile:before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  right: 0;
+  bottom: 15px;
+  background: #333333;
+}
+body .header nav .mobile:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  right: 0;
+  top: 15px;
+  background: #333333;
+}
+body .header nav a {
+  all: unset;
+  display: none;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  text-decoration: none;
+}
+body .news {
+  width: 100%;
+}
+body .news img {
+  width: 100%;
+}
+body .news .content h1 {
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 60px;
+  color: #333333;
+}
+body .news .content .s_content p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+}
+body .news .content .s_content button {
+  all: unset;
+  background: #BBACC1;
+  border-radius: 50px;
+  width: 202px;
+  height: 53px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #F1DEDE;
+}
+body .actu-l {
+  background-color: #333333;
+  color: #ffffff;
+  width: 90%;
+  padding: 5%;
+  margin: 10% 0;
+}
+body .actu-l h1 {
+  color: #BBACC1;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 60px;
+}
+body .actu-l .content h4 {
+  font-weight: 900;
+  font-size: 19px;
+  line-height: 25px;
+  text-transform: capitalize;
+  color: #F1DEDE;
+}
+body .actu-l .content p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+}
+body .actu-s {
+  width: 100%;
+}
+body .actu-s .actu-i {
+  width: 100%;
+  display: flex;
+  margin: 5% 0;
+}
+body .actu-s .actu-i img {
+  width: 30%;
+  height: auto;
+}
+body .actu-s .actu-i .content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  width: 100%;
+}
+body .actu-s .actu-i .content h2 {
+  margin: 5%;
+  font-weight: 900;
+  font-size: 31px;
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #333333;
+}
+body .actu-s .actu-i .content h4 {
+  margin: 5%;
+  font-weight: 900;
+  font-size: 19px;
+  line-height: 25px;
+  text-transform: capitalize;
+  color: #BBACC1;
+}
+body .actu-s .actu-i .content p {
+  margin: 5%;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000000;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    max-width: 100vw;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 30%);
+    grid-column-gap: 2.5%;
+    grid-row-gap: 0px;
+    justify-items: center;
+    justify-content: center;
+  }
+  body .header {
+    grid-area: 1/1/2/4;
+  }
+  body .header nav .mobile {
+    display: none;
+  }
+  body .header nav a {
+    display: initial;
+  }
+  body .news {
+    grid-area: 2/1/3/3;
+  }
+  body .news .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body .news .content h1 {
+    width: 50%;
+  }
+  body .news .content .s_content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  body .actu-l {
+    grid-area: 2/3/3/4;
+    height: 100%;
+    padding: 0 5%;
+  }
+  body .actu-s {
+    grid-area: 3/1/4/4;
+    display: flex;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,238 @@
+$un-color: #333333;
+$de-color: #BBACC1;
+$tr-color: #F1DEDE;
+
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Inter:wght@400;900&display=swap');
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 0;
+    margin: 5%;
+    width: 90%;
+    min-width: calc(350px - 10%);
+    font-family: 'Inter';
+    font-style: normal;
+    // margin: 0 5%;
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+
+        .logo{
+            color: $un-color;
+            font-family: 'Gravitas One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 60px;
+            line-height: 76px;
+            letter-spacing: -10px;          
+        }
+        nav{
+            position: relative;
+            width: 35vw;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 21px;
+            color: $un-color;
+
+            .mobile{
+                position: absolute;
+                width: 40px;
+                height: 5px;
+                right: 0;
+                background: $un-color;
+
+                &:before{
+                    content: '';
+                    position: absolute;
+                    width: 40px;
+                    height: 5px;
+                    right: 0;
+                    bottom: 15px;
+                    background: $un-color;
+                }
+                &:after{
+                    content: '';
+                    position: absolute;
+                    width: 20px;
+                    height: 5px;
+                    right: 0;
+                    top: 15px;
+                    background: $un-color;
+                }
+            }
+            a{
+                all: unset;
+                display: none;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 21px;
+                text-decoration: none;
+            }
+        }
+    }
+    .news {
+        width: 100%;
+
+        img{
+            width: 100%;
+        }
+        .content{
+            h1{
+                font-weight: 900;
+                font-size: 60px;
+                line-height: 60px;
+                color: $un-color;
+            }
+            .s_content{
+                p{
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 25px;
+                }
+                button{
+                    all: unset;
+                    background: $de-color;
+                    border-radius: 50px;
+                    width: 202px;
+                    height: 53px;
+                    font-weight: 700;
+                    font-size: 17px;
+                    line-height: 25px;
+                    text-align: center;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    color: $tr-color;
+                }
+            }
+        }
+    }
+    .actu-l{
+        background-color: $un-color;
+        color: #ffffff;
+        width: 90%;
+        padding: 5%;
+        margin: 10% 0;
+
+        h1{
+            color: $de-color;
+            font-weight: 900;
+            font-size: 40px;
+            line-height: 60px;
+        }
+        .content{
+            h4{
+                font-weight: 900;
+                font-size: 19px;
+                line-height: 25px;
+                text-transform: capitalize;
+                color: $tr-color;
+            }
+            p{
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 25px;
+            }
+        }
+    }
+    .actu-s{
+        width: 100%;
+        .actu-i{
+            width: 100%;
+            display: flex;
+            margin: 5% 0;
+    
+            img{
+                width: 30%;
+                height: auto;
+            }
+            .content{
+                display: flex;
+                flex-direction:column;
+                margin-left: 5%;
+                width: 100%;
+                h2{
+                    margin: 5%;
+                    font-weight: 900;
+                    font-size: 31px;
+                    line-height: 25px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    color: $un-color;
+                }
+                h4{
+                    margin: 5%;
+                    font-weight: 900;
+                    font-size: 19px;
+                    line-height: 25px;
+                    text-transform: capitalize;
+                    color: $de-color;
+                }
+                p{
+                    margin: 5%;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 25px;
+                    color: #000000;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body{
+        max-width: 100vw;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(3, 30%);
+        // grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 2.5%;
+        grid-row-gap: 0px;
+        justify-items: center;
+        justify-content: center;
+
+        .header{
+            grid-area: 1 / 1 / 2 / 4;
+            nav {
+                .mobile{
+                    display: none;
+                }
+                a{
+                    display: initial;
+                }
+            }
+        }
+        .news{
+            .content{
+                display: flex;
+                flex-wrap: wrap;
+                h1{
+                    width: 50%;
+                }
+                .s_content{
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+            grid-area: 2 / 1 / 3 / 3;
+        }
+        .actu-l{
+            grid-area: 2/3/3/4;
+            height: 100%;
+            padding: 0 5%;
+        }
+        .actu-s{
+            grid-area: 3 / 1 / 4 / 4;
+            display: flex;
+        }
+    }
+}
