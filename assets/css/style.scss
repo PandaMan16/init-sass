@@ -79,10 +79,12 @@ body{
     }
     .news {
         width: 100%;
-
-        img{
-            width: 100%;
+        .img_n{
+            img{
+                width: 100%;
+            }
         }
+        
         .content{
             h1{
                 font-weight: 900;
@@ -200,6 +202,7 @@ body{
 
         .header{
             grid-area: 1 / 1 / 2 / 4;
+            height: 100px;
             nav {
                 .mobile{
                     display: none;
@@ -210,6 +213,13 @@ body{
             }
         }
         .news{
+            .img_n{
+                height: 45vh;
+                overflow: hidden;
+                img{
+                    transform: translateY(-20%);
+                }
+            }
             .content{
                 display: flex;
                 flex-wrap: wrap;
