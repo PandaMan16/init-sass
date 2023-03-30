@@ -4,7 +4,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 0;
-  margin: 5%;
+  margin: 0 5%;
   width: 90%;
   min-width: calc(350px - 10%);
   font-family: "Inter";
