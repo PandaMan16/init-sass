@@ -1,16 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Gravitas+One&family=Inter:wght@400;900&display=swap");
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-  margin: 0 5%;
-  width: 90%;
-  min-width: calc(350px - 10%);
-  font-family: "Inter";
-  font-style: normal;
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  grid-column-gap: 0;
+  grid-row-gap: 5vh;
+  justify-content: center;
+  justify-items: center;
 }
 body .header {
+  grid-area: 1/1/2/3;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -69,7 +67,14 @@ body .header nav a {
   line-height: 21px;
   text-decoration: none;
 }
+body .header nav a:after {
+  width: 100%;
+  height: 5px;
+  content: " ";
+  transition: all 0.5s ease;
+}
 body .news {
+  grid-area: 2/1/3/3;
   width: 100%;
 }
 body .news .img_n img {
@@ -101,11 +106,11 @@ body .news .content .s_content button {
   color: #F1DEDE;
 }
 body .actu-l {
+  grid-area: 3/1/4/3;
   background-color: #333333;
   color: #ffffff;
   width: 90%;
-  padding: 5%;
-  margin: 10% 0;
+  padding: 0 5%;
 }
 body .actu-l h1 {
   color: #BBACC1;
@@ -126,6 +131,7 @@ body .actu-l .content p {
   line-height: 25px;
 }
 body .actu-s {
+  grid-area: 4/1/5/3;
   width: 100%;
 }
 body .actu-s .actu-i {
@@ -166,6 +172,18 @@ body .actu-s .actu-i .content p {
   font-size: 15px;
   line-height: 25px;
   color: #000000;
+}
+
+.actu-s .actu-i:nth-child(1) h2::after {
+  content: "01";
+}
+
+.actu-s .actu-i:nth-child(2) h2::after {
+  content: "02";
+}
+
+.actu-s .actu-i:nth-child(3) h2::after {
+  content: "03";
 }
 
 @media screen and (min-width: 1024px) {
@@ -215,7 +233,6 @@ body .actu-s .actu-i .content p {
   body .actu-l {
     grid-area: 2/3/3/4;
     height: 100%;
-    padding: 0 5%;
   }
   body .actu-s {
     grid-area: 3/1/4/4;
