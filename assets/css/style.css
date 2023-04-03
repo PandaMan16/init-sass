@@ -6,6 +6,8 @@ body {
   grid-row-gap: 5vh;
   justify-content: center;
   justify-items: center;
+  font-family: "Inter";
+  font-style: normal;
 }
 body .header {
   grid-area: 1/1/2/3;
